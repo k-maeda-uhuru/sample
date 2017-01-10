@@ -118,22 +118,23 @@
 - BackupsのCapture Backupボタンを押してから,Downloadボタンを押す。
 - ダウンロードしたファイル名をlatest.dump.devにリネームして、共有フォルダーである~/vagrantにコピーする。
 - 仮想環境に接続してダウンロードしたlatest.dump.devをPostgresにインポートする
-    ```
+
+```
     cd ~/vagrant
     vagrant ssh
     sudo su - postgres
     cd /vagrant
     pg_restore --verbose --clean --no-acl --no-owner -h localhost -d postgres latest.dump.dev
-    ```
+```
 - 以下のユーザでログインできる。
-    ```
-        k.hirakawa+devT001@sub-uhuru.jp
-        k.hirakawa+devH001@sub-uhuru.jp
-        k.hirakawa+devE001@sub-uhuru.jp
-        aki.nakabayashi+devq001@sub-uhuru.jp
-        aki.nakabayashi+devj001@sub-uhuru.jp
-        aki.nakabayashi+devf001@sub-uhuru.jp
-    ```
+```
+    k.hirakawa+devT001@sub-uhuru.jp
+    k.hirakawa+devH001@sub-uhuru.jp
+    k.hirakawa+devE001@sub-uhuru.jp
+    aki.nakabayashi+devq001@sub-uhuru.jp
+    aki.nakabayashi+devj001@sub-uhuru.jp
+    aki.nakabayashi+devf001@sub-uhuru.jp
+```
 - PASS：devdev
 - 「Oh noes, an error!
      The application made an invalid OAuth request.
