@@ -114,10 +114,10 @@
 
 
 #### dev環境のPostgresデータを仮想環境にインポートする方法
-##### https://dashboard.heroku.com/apps/uhuru-backend-dev にログインしてからOverviewタブのHeroku Postgresアイコンを押す。
-- BackupsのCapture Backupボタンを押してから,Downloadボタンを押す。
-- ダウンロードしたファイル名をlatest.dump.devにリネームして、共有フォルダーである~/vagrantにコピーする。
-- 仮想環境に接続してダウンロードしたlatest.dump.devをPostgresにインポートする
+1. https://dashboard.heroku.com/apps/uhuru-backend-dev にログインしてからOverviewタブのHeroku Postgresアイコンを押す。
+2. BackupsのCapture Backupボタンを押してから,Downloadボタンを押す。
+3. ダウンロードしたファイル名をlatest.dump.devにリネームして、共有フォルダーである~/vagrantにコピーする。
+4. 仮想環境に接続してダウンロードしたlatest.dump.devをPostgresにインポートする
 
 ```
     cd ~/vagrant
