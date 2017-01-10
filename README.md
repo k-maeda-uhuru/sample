@@ -114,32 +114,32 @@
 
 
 #### dev環境のPostgresデータを仮想環境にインポートする方法
-    - https://dashboard.heroku.com/apps/uhuru-backend-dev にログインしてから
-      OverviewタブのHeroku Postgresアイコンを押す。
-    - BackupsのCapture Backupボタンを押してから,Downloadボタンを押す。
-    - ダウンロードしたファイル名をlatest.dump.devにリネームして、共有フォルダーである~/vagrantにコピーする。
-    - 仮想環境に接続してダウンロードしたlatest.dump.devをPostgresにインポートする
-        # cd ~/vagrant
-        # vagrant ssh
-        # sudo su - postgres
-        # cd /vagrant
-        # pg_restore --verbose --clean --no-acl --no-owner -h localhost -d postgres latest.dump.dev
+- https://dashboard.heroku.com/apps/uhuru-backend-dev にログインしてから
+  OverviewタブのHeroku Postgresアイコンを押す。
+- BackupsのCapture Backupボタンを押してから,Downloadボタンを押す。
+- ダウンロードしたファイル名をlatest.dump.devにリネームして、共有フォルダーである~/vagrantにコピーする。
+- 仮想環境に接続してダウンロードしたlatest.dump.devをPostgresにインポートする
+    # cd ~/vagrant
+    # vagrant ssh
+    # sudo su - postgres
+    # cd /vagrant
+    # pg_restore --verbose --clean --no-acl --no-owner -h localhost -d postgres latest.dump.dev
 
-    - 以下のユーザでログインできる。
-        - k.hirakawa+devT001@sub-uhuru.jp
-        - k.hirakawa+devH001@sub-uhuru.jp
-        - k.hirakawa+devE001@sub-uhuru.jp
-        - aki.nakabayashi+devq001@sub-uhuru.jp
-        - aki.nakabayashi+devj001@sub-uhuru.jp
-        - aki.nakabayashi+devf001@sub-uhuru.jp
-    - PASS：devdev
-    - 「Oh noes, an error!
-         The application made an invalid OAuth request.
-         Unknown client ID f9fqc45jw0by8a891ko0uvu7yl6r8o7」
-        と怒られたら、
-        oauth2_clientsテーブルに怒られたclient IDのレコードを追加する。
-        このとき、redirect_uriは以下にする。
-        http://192.168.33.10/#/receive_token
+- 以下のユーザでログインできる。
+    - k.hirakawa+devT001@sub-uhuru.jp
+    - k.hirakawa+devH001@sub-uhuru.jp
+    - k.hirakawa+devE001@sub-uhuru.jp
+    - aki.nakabayashi+devq001@sub-uhuru.jp
+    - aki.nakabayashi+devj001@sub-uhuru.jp
+    - aki.nakabayashi+devf001@sub-uhuru.jp
+- PASS：devdev
+- 「Oh noes, an error!
+     The application made an invalid OAuth request.
+     Unknown client ID f9fqc45jw0by8a891ko0uvu7yl6r8o7」
+    と怒られたら、
+    oauth2_clientsテーブルに怒られたclient IDのレコードを追加する。
+    このとき、redirect_uriは以下にする。
+    http://192.168.33.10/#/receive_token
 
 #### front-endの準備っぽい事
 - front-endでnpm installする
